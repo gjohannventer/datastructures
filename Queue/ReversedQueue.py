@@ -43,9 +43,9 @@ class Queue:
         self.tail = None
         self.num_elements = 0
 
-    def enqueue(self, value)
+    def enqueue(self, data):
         new_node = LinkedListNode(data)
-        if self.head is None
+        if self.head is None:
             self.head = new_node
             self.tail = new_node
         else:
@@ -65,7 +65,7 @@ class Queue:
 
     def front(self):
         if self.head is None:
-            return None:
+            return None
         return self.head.data
 
     def size(self):
@@ -74,7 +74,14 @@ class Queue:
     def is_empty(self):
         return self.size() == 0
 
-    def reverse_queue(queue):
+
+def reverse_queue(queue):
+        stack = Stack()
+        while not queue.is_empty():
+            stack.push(queue.dequeue())
+
+        while not stack.is_empty():
+            queue.enqueue(stack.pop())
 
 def test_function(test_case):
     queue = Queue()
@@ -92,7 +99,11 @@ def test_function(test_case):
             index -= 1
     print("Pass")
 
-        
+test_case_1 = [1, 2, 3, 4]
+test_function(test_case_1)
+
+test_case_2 = [1]
+test_function(test_case_2)
 
 
 
