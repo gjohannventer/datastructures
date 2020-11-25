@@ -59,8 +59,7 @@ class Node(object):
     
     def has_right_child(self):
         return self.right != None
-    
-    # define __repr_ to decide what a print statement displays for a Node object
+        
     def __repr__(self):
         return f"Node({self.get_value()})"
     
