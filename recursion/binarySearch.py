@@ -13,3 +13,6 @@ def binary_search_func(arr, start_index, end_index, target):
         return binary_search_func(arr, start_index, mid_index - 1, target)
     else:
         return binary_search_func(arr, mid_index + 1, end_index, target)
+
+
+        #T(n/2)

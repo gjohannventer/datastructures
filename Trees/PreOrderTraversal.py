@@ -130,3 +130,58 @@ def pre_order_with_stack(tree, debug_mode=False):
                 node = None
 
 
+
+def pre_order(tree):
+    visit_order = list()
+    root = tree.get_root()
+    
+
+    def traverse(node):
+    if node: # also acts as a base case
+        #visit
+        visit_order.append(node.get_value())
+        # traverse left
+        traverse(node.get_left_child())
+        #traverse right
+        traverse(node.get_right_child())
+
+    traverse(root)
+    
+    return visit_order
+
+def in_order(tree):
+    visit_order = list()
+    root = tree.get_root()
+
+    def traverse(node):
+    if node: # also acts as a base case
+        # traverse left
+        traverse(node.get_left_child())
+        #visit
+        visit_order.append(node.get_value())
+        #traverse right
+        traverse(node.get_right_child())
+
+    traverse(root)
+    
+    return visit_order
+
+def in_order(tree):
+    visit_order = list()
+    root = tree.get_root()
+
+    def traverse(node):
+    if node: # also acts as a base case
+        # traverse left
+        traverse(node.get_left_child())
+        #traverse right
+        traverse(node.get_right_child())
+        #visit
+        visit_order.append(node.get_value())
+    
+    traverse(root)
+    
+    return visit_order
+
+    
+
